@@ -1,9 +1,11 @@
+import Image from "next/image"
+
 export const NftCard = ({ nft }) => {
 
   return (
     <div className="w-1/4 flex flex-col ">
       <div className="rounded-md">
-        <img className="object-cover h-128 w-full rounded-t-md" src={nft.media[0].gateway} ></img>
+        <Image className="object-cover h-128 w-full rounded-t-md" src={nft.media[0].gateway} alt={nft.title} ></Image>
       </div>
       <div className="flex flex-col y-gap-2 px-2 py-3 bg-slate-100 rounded-b-md h-110 ">
           <div className="">
